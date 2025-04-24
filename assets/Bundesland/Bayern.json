@@ -1,0 +1,132 @@
+{
+    "Frage №311": {
+        "question": "Welches Wappen gehört zum Freistaat Bayern?",
+        "image": "https://www.lebenindeutschland.eu/img/questions/311.png",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        },
+        "correct_answer": {
+            "B": "2"
+        }
+    },
+    "Frage №312": {
+        "question": "Welches ist ein Landkreis in Bayern?",
+        "image": null,
+        "options": {
+            "A": "Prignitz",
+            "B": "Rhein-Sieg-Kreis",
+            "C": "Nordfriesland",
+            "D": "Altötting"
+        },
+        "correct_answer": {
+            "D": "Altötting"
+        }
+    },
+    "Frage №313": {
+        "question": "Für wie viele Jahre wird der Landtag in Bayern gewählt?",
+        "image": null,
+        "options": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "6"
+        },
+        "correct_answer": {
+            "C": "5"
+        }
+    },
+    "Frage №314": {
+        "question": "Ab welchem Alter darf man in Bayern bei Kommunalwahlen wählen?",
+        "image": null,
+        "options": {
+            "A": "14",
+            "B": "16",
+            "C": "18",
+            "D": "20"
+        },
+        "correct_answer": {
+            "C": "18"
+        }
+    },
+    "Frage №315": {
+        "question": "Welche Farben hat die Landesflagge von Bayern?",
+        "image": null,
+        "options": {
+            "A": "blau-weiß-rot",
+            "B": "weiß-blau",
+            "C": "grün-weiß-rot",
+            "D": "schwarz-gelb"
+        },
+        "correct_answer": {
+            "B": "weiß-blau"
+        }
+    },
+    "Frage №316": {
+        "question": "Wo können Sie sich in Bayern über politische Themen informieren?",
+        "image": null,
+        "options": {
+            "A": "beim Ordnungsamt der Gemeinde",
+            "B": "bei der Landeszentrale für politische Bildung",
+            "C": "bei der Verbraucherzentrale",
+            "D": "bei den Kirchen"
+        },
+        "correct_answer": {
+            "B": "bei der Landeszentrale für politische Bildung"
+        }
+    },
+    "Frage №317": {
+        "question": "Die Landeshauptstadt von Bayern heißt ...",
+        "image": null,
+        "options": {
+            "A": "Ingolstadt.",
+            "B": "Regensburg.",
+            "C": "Nürnberg.",
+            "D": "München."
+        },
+        "correct_answer": {
+            "D": "München."
+        }
+    },
+    "Frage №318": {
+        "question": "Welches Bundesland ist Bayern?",
+        "image": "https://www.lebenindeutschland.eu/img/questions/318.png",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        },
+        "correct_answer": {
+            "D": "4"
+        }
+    },
+    "Frage №319": {
+        "question": "Wie nennt man den Regierungschef / die Regierungschefin in Bayern?",
+        "image": null,
+        "options": {
+            "A": "Erster Minister / Erste Ministerin",
+            "B": "Premierminister / Premierministerin",
+            "C": "Bürgermeister / Bürgermeisterin",
+            "D": "Ministerpräsident / Ministerpräsidentin"
+        },
+        "correct_answer": {
+            "D": "Ministerpräsident / Ministerpräsidentin"
+        }
+    },
+    "Frage №320": {
+        "question": "Welchen Minister / welche Ministerin hat Bayern nicht?",
+        "image": null,
+        "options": {
+            "A": "Justizminister / Justizministerin",
+            "B": "Außenminister / Außenministerin",
+            "C": "Finanzminister / Finanzministerin",
+            "D": "Innenminister / Innenministerin"
+        },
+        "correct_answer": {
+            "B": "Außenminister / Außenministerin"
+        }
+    }
+}

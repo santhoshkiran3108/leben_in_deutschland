@@ -1,0 +1,132 @@
+{
+    "Frage №321": {
+        "question": "Welches Wappen gehört zum Bundesland Berlin?",
+        "image": "https://www.lebenindeutschland.eu/img/questions/321.png",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        },
+        "correct_answer": {
+            "D": "4"
+        }
+    },
+    "Frage №322": {
+        "question": "Welches ist ein Bezirk von Berlin?",
+        "image": null,
+        "options": {
+            "A": "Altona",
+            "B": "Prignitz",
+            "C": "Pankow",
+            "D": "Mecklenburgische Seenplatte"
+        },
+        "correct_answer": {
+            "C": "Pankow"
+        }
+    },
+    "Frage №323": {
+        "question": "Für wie viele Jahre wird das Landesparlament in Berlin gewählt?",
+        "image": null,
+        "options": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "6"
+        },
+        "correct_answer": {
+            "C": "5"
+        }
+    },
+    "Frage №324": {
+        "question": "Ab welchem Alter darf man in Berlin bei Kommunalwahlen (Wahl der Bezirksverordnetenversammlung) wählen?",
+        "image": null,
+        "options": {
+            "A": "14",
+            "B": "16",
+            "C": "18",
+            "D": "20"
+        },
+        "correct_answer": {
+            "B": "16"
+        }
+    },
+    "Frage №325": {
+        "question": "Welche Farben hat die Landesflagge von Berlin?",
+        "image": null,
+        "options": {
+            "A": "blau-weiß-rot",
+            "B": "weiß-rot",
+            "C": "grün-weiß-rot",
+            "D": "schwarz-gold"
+        },
+        "correct_answer": {
+            "B": "weiß-rot"
+        }
+    },
+    "Frage №326": {
+        "question": "Wo können Sie sich in Berlin über politische Themen informieren?",
+        "image": null,
+        "options": {
+            "A": "beim Ordnungsamt der Gemeinde",
+            "B": "bei den Kirchen",
+            "C": "bei der Verbraucherzentrale",
+            "D": "bei der Landeszentrale für politische Bildung"
+        },
+        "correct_answer": {
+            "D": "bei der Landeszentrale für politische Bildung"
+        }
+    },
+    "Frage №327": {
+        "question": "Welches Bundesland ist ein Stadtstaat?",
+        "image": null,
+        "options": {
+            "A": "Berlin",
+            "B": "Saarland",
+            "C": "Brandenburg",
+            "D": "Hessen"
+        },
+        "correct_answer": {
+            "A": "Berlin"
+        }
+    },
+    "Frage №328": {
+        "question": "Welches Bundesland ist Berlin?",
+        "image": "https://www.lebenindeutschland.eu/img/questions/328.png",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        },
+        "correct_answer": {
+            "D": "4"
+        }
+    },
+    "Frage №329": {
+        "question": "Wie nennt man den Regierungschef / die Regierungschefin des Stadtstaates Berlin?",
+        "image": null,
+        "options": {
+            "A": "Ministerpräsident / Ministerpräsidentin",
+            "B": "Oberbürgermeister / Oberbürgermeisterin",
+            "C": "Präsident / Präsidentin des Senats",
+            "D": "Regierender Bürgermeister / Regierende Bürgermeisterin"
+        },
+        "correct_answer": {
+            "D": "Regierender Bürgermeister / Regierende Bürgermeisterin"
+        }
+    },
+    "Frage №330": {
+        "question": "Welchen Senator / welche Senatorin hat Berlin nicht?",
+        "image": null,
+        "options": {
+            "A": "Finanzsenator / Finanzsenatorin",
+            "B": "Innensenator / Innensenatorin",
+            "C": "Senator / Senatorin für Außenbeziehungen",
+            "D": "Justizsenator / Justizsenatorin"
+        },
+        "correct_answer": {
+            "C": "Senator / Senatorin für Außenbeziehungen"
+        }
+    }
+}

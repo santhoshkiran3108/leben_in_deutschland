@@ -1,0 +1,132 @@
+{
+    "Frage №361": {
+        "question": "Welches Wappen gehört zum Bundesland Hessen?",
+        "image": "https://www.lebenindeutschland.eu/img/questions/361.png",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        },
+        "correct_answer": {
+            "A": "1"
+        }
+    },
+    "Frage №362": {
+        "question": "Welches ist ein Landkreis in Hessen?",
+        "image": null,
+        "options": {
+            "A": "Ammerland",
+            "B": "Altötting",
+            "C": "Prignitz",
+            "D": "Main-Taunus-Kreis"
+        },
+        "correct_answer": {
+            "D": "Main-Taunus-Kreis"
+        }
+    },
+    "Frage №363": {
+        "question": "Für wie viele Jahre wird der Landtag in Hessen gewählt?",
+        "image": null,
+        "options": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "6"
+        },
+        "correct_answer": {
+            "C": "5"
+        }
+    },
+    "Frage №364": {
+        "question": "Ab welchem Alter darf man in Hessen bei Kommunalwahlen wählen?",
+        "image": null,
+        "options": {
+            "A": "14",
+            "B": "16",
+            "C": "18",
+            "D": "20"
+        },
+        "correct_answer": {
+            "C": "18"
+        }
+    },
+    "Frage №365": {
+        "question": "Welche Farben hat die Landesflagge von Hessen?",
+        "image": null,
+        "options": {
+            "A": "blau-weiß-rot",
+            "B": "rot-weiß",
+            "C": "schwarz-gold",
+            "D": "grün-weiß-rot"
+        },
+        "correct_answer": {
+            "B": "rot-weiß"
+        }
+    },
+    "Frage №366": {
+        "question": "Wo können Sie sich in Hessen über politische Themen informieren?",
+        "image": null,
+        "options": {
+            "A": "bei der Landeszentrale für politische Bildung",
+            "B": "bei der Verbraucherzentrale",
+            "C": "beim Ordnungsamt der Gemeinde",
+            "D": "bei den Kirchen"
+        },
+        "correct_answer": {
+            "A": "bei der Landeszentrale für politische Bildung"
+        }
+    },
+    "Frage №367": {
+        "question": "Die Landeshauptstadt von Hessen heißt ...",
+        "image": null,
+        "options": {
+            "A": "Kassel.",
+            "B": "Darmstadt.",
+            "C": "Frankfurt.",
+            "D": "Wiesbaden."
+        },
+        "correct_answer": {
+            "D": "Wiesbaden."
+        }
+    },
+    "Frage №368": {
+        "question": "Welches Bundesland ist Hessen?",
+        "image": "https://www.lebenindeutschland.eu/img/questions/368.png",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        },
+        "correct_answer": {
+            "C": "3"
+        }
+    },
+    "Frage №369": {
+        "question": "Wie nennt man den Regierungschef / die Regierungschefin in Hessen?",
+        "image": null,
+        "options": {
+            "A": "Erster Minister / Erste Ministerin",
+            "B": "Premierminister / Premierministerin",
+            "C": "Bürgermeister / Bürgermeisterin",
+            "D": "Ministerpräsident / Ministerpräsidentin"
+        },
+        "correct_answer": {
+            "D": "Ministerpräsident / Ministerpräsidentin"
+        }
+    },
+    "Frage №370": {
+        "question": "Welchen Minister / welche Ministerin hat Hessen nicht?",
+        "image": null,
+        "options": {
+            "A": "Justizminister / Justizministerin",
+            "B": "Außenminister / Außenministerin",
+            "C": "Finanzminister / Finanzministerin",
+            "D": "Innenminister / Innenministerin"
+        },
+        "correct_answer": {
+            "B": "Außenminister / Außenministerin"
+        }
+    }
+}

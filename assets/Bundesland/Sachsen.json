@@ -1,0 +1,132 @@
+{
+    "Frage №421": {
+        "question": "Welches Wappen gehört zum Freistaat Sachsen?",
+        "image": "https://www.lebenindeutschland.eu/img/questions/421.png",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        },
+        "correct_answer": {
+            "D": "4"
+        }
+    },
+    "Frage №422": {
+        "question": "Welches ist ein Landkreis in Sachsen?",
+        "image": null,
+        "options": {
+            "A": "Vogtlandkreis",
+            "B": "Altötting",
+            "C": "Uckermark",
+            "D": "Nordfriesland"
+        },
+        "correct_answer": {
+            "A": "Vogtlandkreis"
+        }
+    },
+    "Frage №423": {
+        "question": "Für wie viele Jahre wird der Landtag in Sachsen gewählt?",
+        "image": null,
+        "options": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "6"
+        },
+        "correct_answer": {
+            "C": "5"
+        }
+    },
+    "Frage №424": {
+        "question": "Ab welchem Alter darf man in Sachsen bei Kommunalwahlen wählen?",
+        "image": null,
+        "options": {
+            "A": "14",
+            "B": "16",
+            "C": "18",
+            "D": "20"
+        },
+        "correct_answer": {
+            "C": "18"
+        }
+    },
+    "Frage №425": {
+        "question": "Welche Farben hat die Landesflagge von Sachsen?",
+        "image": null,
+        "options": {
+            "A": "blau-weiß-rot",
+            "B": "weiß-grün",
+            "C": "grün-weiß-rot",
+            "D": "schwarz-gelb"
+        },
+        "correct_answer": {
+            "B": "weiß-grün"
+        }
+    },
+    "Frage №426": {
+        "question": "Wo können Sie sich in Sachsen über politische Themen informieren?",
+        "image": null,
+        "options": {
+            "A": "bei der Landeszentrale für politische Bildung",
+            "B": "beim Ordnungsamt der Gemeinde",
+            "C": "bei den Kirchen",
+            "D": "bei der Verbraucherzentrale"
+        },
+        "correct_answer": {
+            "A": "bei der Landeszentrale für politische Bildung"
+        }
+    },
+    "Frage №427": {
+        "question": "Die Landeshauptstadt von Sachsen heißt …",
+        "image": null,
+        "options": {
+            "A": "Leipzig.",
+            "B": "Dresden.",
+            "C": "Chemnitz.",
+            "D": "Zwickau."
+        },
+        "correct_answer": {
+            "B": "Dresden."
+        }
+    },
+    "Frage №428": {
+        "question": "Welches Bundesland ist Sachsen?",
+        "image": "https://www.lebenindeutschland.eu/img/questions/428.png",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        },
+        "correct_answer": {
+            "D": "4"
+        }
+    },
+    "Frage №429": {
+        "question": "Wie nennt man den Regierungschef / die Regierungschefin in Sachsen?",
+        "image": null,
+        "options": {
+            "A": "Erster Minister / Erste Ministerin",
+            "B": "Premierminister / Premierministerin",
+            "C": "Bürgermeister / Bürgermeisterin",
+            "D": "Ministerpräsident / Ministerpräsidentin"
+        },
+        "correct_answer": {
+            "D": "Ministerpräsident / Ministerpräsidentin"
+        }
+    },
+    "Frage №430": {
+        "question": "Welchen Minister / welche Ministerin hat Sachsen nicht?",
+        "image": null,
+        "options": {
+            "A": "Justizminister / Justizministerin",
+            "B": "Außenminister / Außenministerin",
+            "C": "Finanzminister / Finanzministerin",
+            "D": "Innenminister / Innenministerin"
+        },
+        "correct_answer": {
+            "B": "Außenminister / Außenministerin"
+        }
+    }
+}

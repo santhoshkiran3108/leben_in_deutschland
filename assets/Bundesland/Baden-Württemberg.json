@@ -1,0 +1,132 @@
+{
+    "Frage №301": {
+        "question": "Welches Wappen gehört zum Bundesland Baden-Württemberg?",
+        "image": "https://www.lebenindeutschland.eu/img/questions/301.png",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        },
+        "correct_answer": {
+            "A": "1"
+        }
+    },
+    "Frage №302": {
+        "question": "Welches ist ein Landkreis in Baden-Württemberg?",
+        "image": null,
+        "options": {
+            "A": "Mecklenburgische Seenplatte",
+            "B": "Neckar-Odenwald-Kreis",
+            "C": "Nordfriesland",
+            "D": "Altötting"
+        },
+        "correct_answer": {
+            "B": "Neckar-Odenwald-Kreis"
+        }
+    },
+    "Frage №303": {
+        "question": "Für wie viele Jahre wird der Landtag in Baden-Württemberg gewählt?",
+        "image": null,
+        "options": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "6"
+        },
+        "correct_answer": {
+            "C": "5"
+        }
+    },
+    "Frage №304": {
+        "question": "Ab welchem Alter darf man in Baden-Württemberg bei Kommunalwahlen wählen?",
+        "image": null,
+        "options": {
+            "A": "14",
+            "B": "16",
+            "C": "18",
+            "D": "20"
+        },
+        "correct_answer": {
+            "B": "16"
+        }
+    },
+    "Frage №305": {
+        "question": "Welche Farben hat die Landesflagge von Baden-Württemberg?",
+        "image": null,
+        "options": {
+            "A": "blau-weiß-rot",
+            "B": "schwarz-gold",
+            "C": "weiß-blau",
+            "D": "grün-weiß-rot"
+        },
+        "correct_answer": {
+            "B": "schwarz-gold"
+        }
+    },
+    "Frage №306": {
+        "question": "Wo können Sie sich in Baden-Württemberg über politische Themen informieren?",
+        "image": null,
+        "options": {
+            "A": "beim Ordnungsamt der Gemeinde",
+            "B": "bei der Verbraucherzentrale",
+            "C": "bei der Landeszentrale für politische Bildung",
+            "D": "bei den Kirchen"
+        },
+        "correct_answer": {
+            "C": "bei der Landeszentrale für politische Bildung"
+        }
+    },
+    "Frage №307": {
+        "question": "Die Landeshauptstadt von Baden-Württemberg heißt ...",
+        "image": null,
+        "options": {
+            "A": "Heidelberg.",
+            "B": "Stuttgart.",
+            "C": "Karlsruhe.",
+            "D": "Mannheim."
+        },
+        "correct_answer": {
+            "B": "Stuttgart."
+        }
+    },
+    "Frage №308": {
+        "question": "Welches Bundesland ist Baden-Württemberg?",
+        "image": "https://www.lebenindeutschland.eu/img/questions/308.png",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        },
+        "correct_answer": {
+            "B": "2"
+        }
+    },
+    "Frage №309": {
+        "question": "Wie nennt man den Regierungschef / die Regierungschefin in Baden-Württemberg?",
+        "image": null,
+        "options": {
+            "A": "Erster Minister / Erste Ministerin",
+            "B": "Premierminister / Premierministerin",
+            "C": "Bürgermeister / Bürgermeisterin",
+            "D": "Ministerpräsident / Ministerpräsidentin"
+        },
+        "correct_answer": {
+            "D": "Ministerpräsident / Ministerpräsidentin"
+        }
+    },
+    "Frage №310": {
+        "question": "Welchen Minister / welche Ministerin hat Baden-Württemberg nicht?",
+        "image": null,
+        "options": {
+            "A": "Finanzminister / Finanzministerin",
+            "B": "Justizminister / Justizministerin",
+            "C": "Innenminister / Innenministerin",
+            "D": "Außenminister / Außenministerin"
+        },
+        "correct_answer": {
+            "D": "Außenminister / Außenministerin"
+        }
+    }
+}

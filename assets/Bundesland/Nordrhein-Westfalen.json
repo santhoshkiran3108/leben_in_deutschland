@@ -1,0 +1,132 @@
+{
+    "Frage №391": {
+        "question": "Welches Wappen gehört zum Bundesland Nordrhein-Westfalen?",
+        "image": "https://www.lebenindeutschland.eu/img/questions/391.png",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        },
+        "correct_answer": {
+            "B": "2"
+        }
+    },
+    "Frage №392": {
+        "question": "Welches ist ein Landkreis in Nordrhein-Westfalen?",
+        "image": null,
+        "options": {
+            "A": "Ammerland",
+            "B": "Rhein-Sieg-Kreis",
+            "C": "Nordfriesland",
+            "D": "Vogtlandkreis"
+        },
+        "correct_answer": {
+            "B": "Rhein-Sieg-Kreis"
+        }
+    },
+    "Frage №393": {
+        "question": "Für wie viele Jahre wird der Landtag in Nordrhein-Westfalen gewählt?",
+        "image": null,
+        "options": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "6"
+        },
+        "correct_answer": {
+            "C": "5"
+        }
+    },
+    "Frage №394": {
+        "question": "Ab welchem Alter darf man in Nordrhein-Westfalen bei Kommunalwahlen wählen?",
+        "image": null,
+        "options": {
+            "A": "14",
+            "B": "16",
+            "C": "18",
+            "D": "20"
+        },
+        "correct_answer": {
+            "B": "16"
+        }
+    },
+    "Frage №395": {
+        "question": "Welche Farben hat die Landesflagge von Nordrhein-Westfalen?",
+        "image": null,
+        "options": {
+            "A": "rot-weiß",
+            "B": "grün-weiß-rot",
+            "C": "schwarz-gold",
+            "D": "blau-weiß-rot"
+        },
+        "correct_answer": {
+            "B": "grün-weiß-rot"
+        }
+    },
+    "Frage №396": {
+        "question": "Wo können Sie sich in Nordrhein-Westfalen über politische Themen informieren?",
+        "image": null,
+        "options": {
+            "A": "bei den Kirchen",
+            "B": "beim Ordnungsamt der Gemeinde",
+            "C": "bei der Verbraucherzentrale",
+            "D": "bei der Landeszentrale für politische Bildung"
+        },
+        "correct_answer": {
+            "D": "bei der Landeszentrale für politische Bildung"
+        }
+    },
+    "Frage №397": {
+        "question": "Die Landeshauptstadt von Nordrhein-Westfalen heißt …",
+        "image": null,
+        "options": {
+            "A": "Köln.",
+            "B": "Bonn.",
+            "C": "Düsseldorf.",
+            "D": "Dortmund."
+        },
+        "correct_answer": {
+            "C": "Düsseldorf."
+        }
+    },
+    "Frage №398": {
+        "question": "Welches Bundesland ist Nordrhein-Westfalen?",
+        "image": "https://www.lebenindeutschland.eu/img/questions/398.png",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        },
+        "correct_answer": {
+            "C": "3"
+        }
+    },
+    "Frage №399": {
+        "question": "Wie nennt man den Regierungschef / die Regierungschefin in Nordrhein-Westfalen?",
+        "image": null,
+        "options": {
+            "A": "Erster Minister / Erste Ministerin",
+            "B": "Premierminister / Premierministerin",
+            "C": "Bürgermeister / Bürgermeisterin",
+            "D": "Ministerpräsident / Ministerpräsidentin"
+        },
+        "correct_answer": {
+            "D": "Ministerpräsident / Ministerpräsidentin"
+        }
+    },
+    "Frage №400": {
+        "question": "Welchen Minister / welche Ministerin hat Nordrhein-Westfalen nicht?",
+        "image": null,
+        "options": {
+            "A": "Justizminister / Justizministerin",
+            "B": "Außenminister / Außenministerin",
+            "C": "Finanzminister / Finanzministerin",
+            "D": "Innenminister / Innenministerin"
+        },
+        "correct_answer": {
+            "B": "Außenminister / Außenministerin"
+        }
+    }
+}

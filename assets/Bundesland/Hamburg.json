@@ -1,0 +1,132 @@
+{
+    "Frage №351": {
+        "question": "Welches Wappen gehört zur Freien und Hansestadt Hamburg?",
+        "image": "https://www.lebenindeutschland.eu/img/questions/351.png",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        },
+        "correct_answer": {
+            "B": "2"
+        }
+    },
+    "Frage №352": {
+        "question": "Welches ist ein Bezirk von Hamburg?",
+        "image": null,
+        "options": {
+            "A": "Altona",
+            "B": "Hemelingen",
+            "C": "Pankow",
+            "D": "Mecklenburgische Seenplatte"
+        },
+        "correct_answer": {
+            "A": "Altona"
+        }
+    },
+    "Frage №353": {
+        "question": "Für wie viele Jahre wird das Landesparlament in Hamburg gewählt?",
+        "image": null,
+        "options": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "6"
+        },
+        "correct_answer": {
+            "C": "5"
+        }
+    },
+    "Frage №354": {
+        "question": "Ab welchem Alter darf man in Hamburg bei Kommunalwahlen (Wahl der Bezirksversammlungen) wählen?",
+        "image": null,
+        "options": {
+            "A": "14",
+            "B": "16",
+            "C": "18",
+            "D": "20"
+        },
+        "correct_answer": {
+            "B": "16"
+        }
+    },
+    "Frage №355": {
+        "question": "Welche Farben hat die Landesflagge von Hamburg?",
+        "image": null,
+        "options": {
+            "A": "blau-weiß-rot",
+            "B": "weiß-rot",
+            "C": "grün-weiß-rot",
+            "D": "schwarz-gelb"
+        },
+        "correct_answer": {
+            "B": "weiß-rot"
+        }
+    },
+    "Frage №356": {
+        "question": "Wo können Sie sich in Hamburg über politische Themen informieren?",
+        "image": null,
+        "options": {
+            "A": "beim Ordnungsamt der Gemeinde",
+            "B": "bei der Verbraucherzentrale",
+            "C": "bei den Kirchen",
+            "D": "bei der Landeszentrale für politische Bildung"
+        },
+        "correct_answer": {
+            "D": "bei der Landeszentrale für politische Bildung"
+        }
+    },
+    "Frage №357": {
+        "question": "Welches Bundesland ist ein Stadtstaat?",
+        "image": null,
+        "options": {
+            "A": "Hamburg",
+            "B": "Sachsen",
+            "C": "Bayern",
+            "D": "Thüringen"
+        },
+        "correct_answer": {
+            "A": "Hamburg"
+        }
+    },
+    "Frage №358": {
+        "question": "Welches Bundesland ist Hamburg?",
+        "image": "https://www.lebenindeutschland.eu/img/questions/358.png",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        },
+        "correct_answer": {
+            "C": "3"
+        }
+    },
+    "Frage №359": {
+        "question": "Wie nennt man den Regierungschef / die Regierungschefin des Stadtstaates Hamburg?",
+        "image": null,
+        "options": {
+            "A": "Ministerpräsident / Ministerpräsidentin",
+            "B": "Erster Bürgermeister / Erste Bürgermeisterin",
+            "C": "Regierender Senator / Regierende Senatorin",
+            "D": "Oberbürgermeister / Oberbürgermeisterin"
+        },
+        "correct_answer": {
+            "B": "Erster Bürgermeister / Erste Bürgermeisterin"
+        }
+    },
+    "Frage №360": {
+        "question": "Welchen Senator / welche Senatorin hat Hamburg nicht?",
+        "image": null,
+        "options": {
+            "A": "Justizsenator / Justizsenatorin",
+            "B": "Senator / Senatorin für Außenbeziehungen",
+            "C": "Finanzsenator / Finanzsenatorin",
+            "D": "Innensenator / Innensenatorin"
+        },
+        "correct_answer": {
+            "B": "Senator / Senatorin für Außenbeziehungen"
+        }
+    }
+}

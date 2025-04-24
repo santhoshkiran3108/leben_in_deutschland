@@ -1,0 +1,132 @@
+{
+    "Frage №381": {
+        "question": "Welches Wappen gehört zum Bundesland Niedersachsen?",
+        "image": "https://www.lebenindeutschland.eu/img/questions/381.png",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        },
+        "correct_answer": {
+            "C": "3"
+        }
+    },
+    "Frage №382": {
+        "question": "Welches ist ein Landkreis in Niedersachsen?",
+        "image": null,
+        "options": {
+            "A": "Ammerland",
+            "B": "Rhein-Sieg-Kreis",
+            "C": "Nordfriesland",
+            "D": "Vogtlandkreis"
+        },
+        "correct_answer": {
+            "A": "Ammerland"
+        }
+    },
+    "Frage №383": {
+        "question": "Für wie viele Jahre wird der Landtag in Niedersachsen gewählt?",
+        "image": null,
+        "options": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "6"
+        },
+        "correct_answer": {
+            "C": "5"
+        }
+    },
+    "Frage №384": {
+        "question": "Ab welchem Alter darf man in Niedersachsen bei Kommunalwahlen wählen?",
+        "image": null,
+        "options": {
+            "A": "14",
+            "B": "16",
+            "C": "18",
+            "D": "20"
+        },
+        "correct_answer": {
+            "B": "16"
+        }
+    },
+    "Frage №385": {
+        "question": "Welche Farben hat die Landesflagge von Niedersachsen?",
+        "image": null,
+        "options": {
+            "A": "weiß-blau",
+            "B": "schwarz-rot-gold",
+            "C": "schwarz-gelb",
+            "D": "blau-weiß-rot"
+        },
+        "correct_answer": {
+            "B": "schwarz-rot-gold"
+        }
+    },
+    "Frage №386": {
+        "question": "Wo können Sie sich in Niedersachsen über politische Themen informieren?",
+        "image": null,
+        "options": {
+            "A": "bei der Landeszentrale für politische Bildung",
+            "B": "beim Ordnungsamt der Gemeinde",
+            "C": "bei der Verbraucherzentrale",
+            "D": "bei den Kirchen"
+        },
+        "correct_answer": {
+            "A": "bei der Landeszentrale für politische Bildung"
+        }
+    },
+    "Frage №387": {
+        "question": "Die Landeshauptstadt von Niedersachsen heißt …",
+        "image": null,
+        "options": {
+            "A": "Hannover.",
+            "B": "Braunschweig.",
+            "C": "Wolfsburg.",
+            "D": "Osnabrück."
+        },
+        "correct_answer": {
+            "A": "Hannover."
+        }
+    },
+    "Frage №388": {
+        "question": "Welches Bundesland ist Niedersachsen?",
+        "image": "https://www.lebenindeutschland.eu/img/questions/388.png",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        },
+        "correct_answer": {
+            "A": "1"
+        }
+    },
+    "Frage №389": {
+        "question": "Wie nennt man den Regierungschef / die Regierungschefin in Niedersachsen?",
+        "image": null,
+        "options": {
+            "A": "Erster Minister / Erste Ministerin",
+            "B": "Premierminister / Premierministerin",
+            "C": "Bürgermeister / Bürgermeisterin",
+            "D": "Ministerpräsident / Ministerpräsidentin"
+        },
+        "correct_answer": {
+            "D": "Ministerpräsident / Ministerpräsidentin"
+        }
+    },
+    "Frage №390": {
+        "question": "Welchen Minister / welche Ministerin hat Niedersachsen nicht?",
+        "image": null,
+        "options": {
+            "A": "Justizminister / Justizministerin",
+            "B": "Außenminister / Außenministerin",
+            "C": "Finanzminister / Finanzministerin",
+            "D": "Innenminister / Innenministerin"
+        },
+        "correct_answer": {
+            "B": "Außenminister / Außenministerin"
+        }
+    }
+}

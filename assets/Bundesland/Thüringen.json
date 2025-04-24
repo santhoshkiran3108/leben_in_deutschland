@@ -1,0 +1,132 @@
+{
+    "Frage №451": {
+        "question": "Welches Wappen gehört zum Freistaat Thüringen?",
+        "image": "https://www.lebenindeutschland.eu/img/questions/451.png",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        },
+        "correct_answer": {
+            "D": "4"
+        }
+    },
+    "Frage №452": {
+        "question": "Welches ist ein Landkreis in Thüringen?",
+        "image": null,
+        "options": {
+            "A": "Ammerland",
+            "B": "Altötting",
+            "C": "Nordfriesland",
+            "D": "Wartburgkreis"
+        },
+        "correct_answer": {
+            "D": "Wartburgkreis"
+        }
+    },
+    "Frage №453": {
+        "question": "Für wie viele Jahre wird der Landtag in Thüringen gewählt?",
+        "image": null,
+        "options": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "6"
+        },
+        "correct_answer": {
+            "C": "5"
+        }
+    },
+    "Frage №454": {
+        "question": "Ab welchem Alter darf man in Thüringen bei Kommunalwahlen wählen?",
+        "image": null,
+        "options": {
+            "A": "14",
+            "B": "18",
+            "C": "16",
+            "D": "20"
+        },
+        "correct_answer": {
+            "C": "16"
+        }
+    },
+    "Frage №455": {
+        "question": "Welche Farben hat die Landesflagge von Thüringen?",
+        "image": null,
+        "options": {
+            "A": "blau-weiß-rot",
+            "B": "weiß-rot",
+            "C": "grün-weiß-rot",
+            "D": "schwarz-gold"
+        },
+        "correct_answer": {
+            "B": "weiß-rot"
+        }
+    },
+    "Frage №456": {
+        "question": "Wo können Sie sich in Thüringen über politische Themen informieren?",
+        "image": null,
+        "options": {
+            "A": "bei den Kirchen",
+            "B": "bei der Verbraucherzentrale",
+            "C": "bei der Landeszentrale für politische Bildung",
+            "D": "beim Ordnungsamt der Gemeinde"
+        },
+        "correct_answer": {
+            "C": "bei der Landeszentrale für politische Bildung"
+        }
+    },
+    "Frage №457": {
+        "question": "Die Landeshauptstadt von Thüringen heißt …",
+        "image": null,
+        "options": {
+            "A": "Eisenach.",
+            "B": "Erfurt.",
+            "C": "Gera.",
+            "D": "Jena."
+        },
+        "correct_answer": {
+            "B": "Erfurt."
+        }
+    },
+    "Frage №458": {
+        "question": "Welches Bundesland ist Thüringen?",
+        "image": "https://www.lebenindeutschland.eu/img/questions/458.png",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        },
+        "correct_answer": {
+            "B": "2"
+        }
+    },
+    "Frage №459": {
+        "question": "Wie nennt man den Regierungschef / die Regierungschefin in Thüringen?",
+        "image": null,
+        "options": {
+            "A": "Erster Minister / Erste Ministerin",
+            "B": "Premierminister / Premierministerin",
+            "C": "Bürgermeister / Bürgermeisterin",
+            "D": "Ministerpräsident / Ministerpräsidentin"
+        },
+        "correct_answer": {
+            "D": "Ministerpräsident / Ministerpräsidentin"
+        }
+    },
+    "Frage №460": {
+        "question": "Welchen Minister / welche Ministerin hat Thüringen nicht?",
+        "image": null,
+        "options": {
+            "A": "Justizminister / Justizministerin",
+            "B": "Außenminister / Außenministerin",
+            "C": "Finanzminister / Finanzministerin",
+            "D": "Innenminister / Innenministerin"
+        },
+        "correct_answer": {
+            "B": "Außenminister / Außenministerin"
+        }
+    }
+}

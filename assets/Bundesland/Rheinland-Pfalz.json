@@ -1,0 +1,132 @@
+{
+    "Frage №401": {
+        "question": "Welches Wappen gehört zum Bundesland Rheinland-Pfalz?",
+        "image": "https://www.lebenindeutschland.eu/img/questions/401.png",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        },
+        "correct_answer": {
+            "A": "1"
+        }
+    },
+    "Frage №402": {
+        "question": "Welches ist ein Landkreis in Rheinland-Pfalz?",
+        "image": null,
+        "options": {
+            "A": "Westerwaldkreis",
+            "B": "Altötting",
+            "C": "Emsland",
+            "D": "Prignitz"
+        },
+        "correct_answer": {
+            "A": "Westerwaldkreis"
+        }
+    },
+    "Frage №403": {
+        "question": "Für wie viele Jahre wird der Landtag in Rheinland-Pfalz gewählt?",
+        "image": null,
+        "options": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "6"
+        },
+        "correct_answer": {
+            "C": "5"
+        }
+    },
+    "Frage №404": {
+        "question": "Ab welchem Alter darf man in Rheinland-Pfalz bei Kommunalwahlen wählen?",
+        "image": null,
+        "options": {
+            "A": "14",
+            "B": "16",
+            "C": "18",
+            "D": "20"
+        },
+        "correct_answer": {
+            "C": "18"
+        }
+    },
+    "Frage №405": {
+        "question": "Welche Farben hat die Landesflagge von Rheinland-Pfalz?",
+        "image": null,
+        "options": {
+            "A": "weiß-rot",
+            "B": "schwarz-rot-gold",
+            "C": "schwarz-gelb",
+            "D": "grün-weiß-rot"
+        },
+        "correct_answer": {
+            "B": "schwarz-rot-gold"
+        }
+    },
+    "Frage №406": {
+        "question": "Wo können Sie sich in Rheinland-Pfalz über politische Themen informieren?",
+        "image": null,
+        "options": {
+            "A": "bei den Kirchen",
+            "B": "bei der Verbraucherzentrale",
+            "C": "beim Ordnungsamt der Gemeinde",
+            "D": "bei der Landeszentrale für politische Bildung"
+        },
+        "correct_answer": {
+            "D": "bei der Landeszentrale für politische Bildung"
+        }
+    },
+    "Frage №407": {
+        "question": "Die Landeshauptstadt von Rheinland-Pfalz heißt …",
+        "image": null,
+        "options": {
+            "A": "Mainz.",
+            "B": "Kaiserslautern.",
+            "C": "Ludwigshafen.",
+            "D": "Koblenz."
+        },
+        "correct_answer": {
+            "A": "Mainz."
+        }
+    },
+    "Frage №408": {
+        "question": "Welches Bundesland ist Rheinland-Pfalz?",
+        "image": "https://www.lebenindeutschland.eu/img/questions/408.png",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        },
+        "correct_answer": {
+            "A": "1"
+        }
+    },
+    "Frage №409": {
+        "question": "Wie nennt man den Regierungschef / die Regierungschefin in Rheinland-Pfalz?",
+        "image": null,
+        "options": {
+            "A": "Erster Minister / Erste Ministerin",
+            "B": "Premierminister / Premierministerin",
+            "C": "Bürgermeister / Bürgermeisterin",
+            "D": "Ministerpräsident / Ministerpräsidentin"
+        },
+        "correct_answer": {
+            "D": "Ministerpräsident / Ministerpräsidentin"
+        }
+    },
+    "Frage №410": {
+        "question": "Welchen Minister / welche Ministerin hat Rheinland-Pfalz nicht?",
+        "image": null,
+        "options": {
+            "A": "Justizminister / Justizministerin",
+            "B": "Außenminister / Außenministerin",
+            "C": "Finanzminister / Finanzministerin",
+            "D": "Innenminister / Innenministerin"
+        },
+        "correct_answer": {
+            "B": "Außenminister / Außenministerin"
+        }
+    }
+}
