@@ -7,89 +7,119 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   MobileAds.instance.initialize();
-  runApp(LebenInDeutschlandApp());
+  runApp(const LebenInDeutschlandApp());
 }
 
-class LebenInDeutschlandApp extends StatelessWidget {
+class LebenInDeutschlandApp extends StatefulWidget {
+  const LebenInDeutschlandApp({Key? key}) : super(key: key);
+
+  @override
+  State<LebenInDeutschlandApp> createState() => _LebenInDeutschlandAppState();
+}
+
+class _LebenInDeutschlandAppState extends State<LebenInDeutschlandApp> {
+  ThemeMode _themeMode = ThemeMode.system;
+
+  void toggleTheme(bool isDark) {
+    setState(() {
+      _themeMode = isDark ? ThemeMode.dark : ThemeMode.light;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Leben in Deutschland',
+      themeMode: _themeMode,
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
+        useMaterial3: true,
+        colorSchemeSeed: Colors.indigo,
+        brightness: Brightness.light,
       ),
-      home: HomePage(),
+      darkTheme: ThemeData(
+        useMaterial3: true,
+        colorSchemeSeed: Colors.indigo,
+        brightness: Brightness.dark,
+      ),
+      home: HomePage(onToggleTheme: toggleTheme),
       debugShowCheckedModeBanner: false,
     );
   }
 }
 
 class HomePage extends StatelessWidget {
+  final void Function(bool) onToggleTheme;
+  const HomePage({Key? key, required this.onToggleTheme}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Theme.of(context).brightness == Brightness.dark;
+
     return Scaffold(
-      appBar: AppBar(title: Text("Leben in Deutschland")),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
+      appBar: AppBar(
+        title: const Text("Leben in Deutschland"),
+        actions: [
+          IconButton(
+            icon: Icon(isDarkMode ? Icons.wb_sunny : Icons.nightlight_round),
+            onPressed: () => onToggleTheme(!isDarkMode),
+            tooltip: isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode",
+          ),
+        ],
+      ),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => QuizPage()),
-                );
-              },
-              child: Text("Practice All 300 Questions"),
-            ),
-            SizedBox(height: 16),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => QuizPage(resumeFromLast: true)),
-                );
-              },
-              child: Text("Continue Quiz"),
-            ),
-            SizedBox(height: 16),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => SelectBundeslandPage()),
-                );
-              },
-              child: Text("State-wise Questions"),
-            ),
-            SizedBox(height: 16),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => QuizPage(showOnlyMarked: true)),
-                );
-              },
-              child: Text("Review Marked Questions"),
-            ),
-            SizedBox(height: 16),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => TopicCategoryPage()),
-                );
-              },
-              child: Text("Topic-wise Questions"),
-            ),
+            _buildTile(context, Icons.quiz, "Practice All 300 Questions", () {
+              Navigator.push(context, _fadeRoute(QuizPage()));
+            }),
+            _buildTile(context, Icons.play_arrow, "Continue Quiz", () {
+              Navigator.push(context, _fadeRoute(QuizPage(resumeFromLast: true)));
+            }),
+            _buildTile(context, Icons.map, "State-wise Questions", () {
+              Navigator.push(context, _fadeRoute(SelectBundeslandPage()));
+            }),
+            _buildTile(context, Icons.bookmark, "Review Marked Questions", () {
+              Navigator.push(context, _fadeRoute(QuizPage(showOnlyMarked: true)));
+            }),
+            _buildTile(context, Icons.topic, "Topic-wise Questions", () {
+              Navigator.push(context, _fadeRoute(TopicCategoryPage()));
+            }),
           ],
         ),
       ),
     );
   }
-}
 
+  Widget _buildTile(BuildContext context, IconData icon, String title, VoidCallback onTap) {
+    return AnimatedContainer(
+      duration: Duration(milliseconds: 300),
+      curve: Curves.easeInOut,
+      child: Card(
+        elevation: 3,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        margin: const EdgeInsets.symmetric(vertical: 10),
+        child: ListTile(
+          contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+          leading: Icon(icon, color: Theme.of(context).colorScheme.primary, size: 30),
+          title: Text(title, style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+          trailing: Icon(Icons.arrow_forward_ios, size: 16),
+          onTap: onTap,
+        ),
+      ),
+    );
+  }
+
+  PageRouteBuilder _fadeRoute(Widget page) {
+    return PageRouteBuilder(
+      pageBuilder: (_, __, ___) => page,
+      transitionsBuilder: (_, animation, __, child) {
+        return FadeTransition(opacity: animation, child: child);
+      },
+    );
+  }
+}
 class TopicCategoryPage extends StatefulWidget {
   @override
   _TopicCategoryPageState createState() => _TopicCategoryPageState();
