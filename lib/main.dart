@@ -41,7 +41,7 @@ class HomePage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => QuizPage()),
                 );
               },
-              child: Text("Alle 300 Fragen üben"),
+              child: Text("Practice All 300 Questions"),
             ),
             SizedBox(height: 16),
             ElevatedButton(
@@ -51,7 +51,7 @@ class HomePage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => QuizPage(resumeFromLast: true)),
                 );
               },
-              child: Text("Quiz fortsetzen"),
+              child: Text("Continue Quiz"),
             ),
             SizedBox(height: 16),
             ElevatedButton(
@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => SelectBundeslandPage()),
                 );
               },
-              child: Text("Fragen nach Bundesland"),
+              child: Text("State-wise Questions"),
             ),
             SizedBox(height: 16),
             ElevatedButton(
@@ -71,7 +71,17 @@ class HomePage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => QuizPage(showOnlyMarked: true)),
                 );
               },
-              child: Text("Markierte Fragen wiederholen"),
+              child: Text("Review Marked Questions"),
+            ),
+            SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TopicCategoryPage()),
+                );
+              },
+              child: Text("Topic-wise Questions"),
             ),
           ],
         ),
@@ -80,6 +90,66 @@ class HomePage extends StatelessWidget {
   }
 }
 
+class TopicCategoryPage extends StatefulWidget {
+  @override
+  _TopicCategoryPageState createState() => _TopicCategoryPageState();
+}
+
+class _TopicCategoryPageState extends State<TopicCategoryPage> {
+  Map<String, List<int>> topics = {};
+
+  @override
+  void initState() {
+    super.initState();
+    loadTopics();
+  }
+
+  Future<void> loadTopics() async {
+    final String jsonString = await rootBundle.loadString('assets/topic.json');
+    final Map<String, dynamic> jsonMap = json.decode(jsonString);
+    final parsed = jsonMap.map((key, value) => MapEntry(key, List<int>.from(value)));
+    setState(() {
+      topics = parsed;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Select Topic")),
+      body: topics.isEmpty
+          ? Center(child: CircularProgressIndicator())
+          : ListView(
+              padding: const EdgeInsets.all(16.0),
+              children: topics.entries.map((entry) {
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 12.0),
+                  child: ElevatedButton(
+                    onPressed: () async {
+                      final String jsonString = await rootBundle.loadString('assets/questions.json');
+                      final Map<String, dynamic> jsonMap = json.decode(jsonString);
+                      final allQuestions = jsonMap.entries.map((e) => Question.fromJson(e.value)).toList();
+                      final filtered = <Question>[];
+                      for (var i = 0; i < allQuestions.length; i++) {
+                        if (entry.value.contains(i + 1)) {
+                          filtered.add(allQuestions[i]);
+                        }
+                      }
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => QuizPage(overrideQuestions: filtered),
+                        ),
+                      );
+                    },
+                    child: Text(entry.key),
+                  ),
+                );
+              }).toList(),
+            ),
+    );
+  }
+}
 class SelectBundeslandPage extends StatelessWidget {
   final List<String> bundeslaender = [
     'Baden-Württemberg', 'Bayern', 'Berlin', 'Brandenburg', 'Bremen', 'Hamburg',
@@ -122,8 +192,14 @@ class QuizPage extends StatefulWidget {
   final bool showOnlyMarked;
   final bool resumeFromLast;
   final String? customPath;
+  final List<Question>? overrideQuestions;
 
-  QuizPage({this.showOnlyMarked = false, this.resumeFromLast = false, this.customPath});
+  QuizPage({
+    this.showOnlyMarked = false,
+    this.resumeFromLast = false,
+    this.customPath,
+    this.overrideQuestions,
+  });
 
   @override
   _QuizPageState createState() => _QuizPageState();
@@ -200,25 +276,33 @@ class _QuizPageState extends State<QuizPage> {
   }
 
   Future<void> loadQuestions() async {
-    final path = widget.customPath ?? 'assets/questions.json';
-    final String jsonString = await rootBundle.loadString(path);
-    final Map<String, dynamic> jsonMap = json.decode(jsonString);
-    allQuestions = jsonMap.entries.map((entry) {
-      return Question.fromJson(entry.value);
-    }).toList();
-    if (widget.showOnlyMarked) {
-      final prefs = await SharedPreferences.getInstance();
-      final markedTexts = prefs.getStringList('marked') ?? [];
-      questions = allQuestions.where((q) => markedTexts.contains(q.text)).toList();
-    } else {
-      questions = allQuestions;
-    }
-    if (widget.resumeFromLast && !widget.showOnlyMarked) {
-      await loadProgress();
-    }
+  if (widget.overrideQuestions != null) {
+    questions = widget.overrideQuestions!;
     setState(() {});
+    return;
   }
 
+  final path = widget.customPath ?? 'assets/questions.json';
+  final String jsonString = await rootBundle.loadString(path);
+  final Map<String, dynamic> jsonMap = json.decode(jsonString);
+  allQuestions = jsonMap.entries.map((entry) {
+    return Question.fromJson(entry.value);
+  }).toList();
+
+  if (widget.showOnlyMarked) {
+    final prefs = await SharedPreferences.getInstance();
+    final markedTexts = prefs.getStringList('marked') ?? [];
+    questions = allQuestions.where((q) => markedTexts.contains(q.text)).toList();
+  } else {
+    questions = allQuestions;
+  }
+
+  if (widget.resumeFromLast && !widget.showOnlyMarked) {
+    await loadProgress();
+  }
+
+  setState(() {});
+}
   void nextQuestion() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setInt('lastIndex', currentIndex + 1);
