@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'ad_helper.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -72,10 +73,7 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             _buildTile(context, Icons.quiz, "Practice All 300 Questions", () {
-              Navigator.push(context, _fadeRoute(QuizPage()));
-            }),
-            _buildTile(context, Icons.play_arrow, "Continue Quiz", () {
-              Navigator.push(context, _fadeRoute(QuizPage(resumeFromLast: true)));
+            Navigator.push(context, _fadeRoute(PracticeOptionsPage()));
             }),
             _buildTile(context, Icons.map, "State-wise Questions", () {
               Navigator.push(context, _fadeRoute(SelectBundeslandPage()));
@@ -120,6 +118,44 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+class PracticeOptionsPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Practice All Questions")),
+      body: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton.icon(
+              icon: Icon(Icons.replay),
+              label: Text("Start from Beginning"),
+              style: ElevatedButton.styleFrom(minimumSize: Size.fromHeight(50)),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (_) => QuizPage(),
+                ));
+              },
+            ),
+            SizedBox(height: 20),
+            ElevatedButton.icon(
+              icon: Icon(Icons.play_arrow),
+              label: Text("Continue from Last"),
+              style: ElevatedButton.styleFrom(minimumSize: Size.fromHeight(50)),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (_) => QuizPage(resumeFromLast: true),
+                ));
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 class TopicCategoryPage extends StatefulWidget {
   @override
   _TopicCategoryPageState createState() => _TopicCategoryPageState();
@@ -217,7 +253,6 @@ class SelectBundeslandPage extends StatelessWidget {
     );
   }
 }
-
 class QuizPage extends StatefulWidget {
   final bool showOnlyMarked;
   final bool resumeFromLast;
@@ -245,6 +280,11 @@ class _QuizPageState extends State<QuizPage> {
   late BannerAd _bannerAd;
   bool _isBannerAdReady = false;
 
+  InterstitialAd? _interstitialAd;
+  bool _isInterstitialAdReady = false;
+
+  Set<String> markedQuestions = {};
+
   final List<String> imageFiles = [
     'assets/img/301.png', 'assets/img/308.png', 'assets/img/311.png', 'assets/img/318.png',
     'assets/img/321.png', 'assets/img/328.png', 'assets/img/331.png', 'assets/img/338.png',
@@ -256,6 +296,20 @@ class _QuizPageState extends State<QuizPage> {
     'assets/img/441.png', 'assets/img/448.png', 'assets/img/451.png', 'assets/img/458.png',
   ];
 
+  final Map<int, String> topicImages = {
+  21: 'assets/img/021.png',
+  55: 'assets/img/055.png',
+  70: 'assets/img/070.png',
+  130: 'assets/img/130.png',
+  176: 'assets/img/176.png',
+  181: 'assets/img/181.png',
+  187: 'assets/img/187.png',
+  209: 'assets/img/209.png',
+  216: 'assets/img/216.png',
+  226: 'assets/img/226.png',
+  235: 'assets/img/235.png',
+};
+
   Map<String, Map<int, String>> imageMapping = {};
 
   @override
@@ -264,25 +318,7 @@ class _QuizPageState extends State<QuizPage> {
     buildImageMapping();
     loadQuestions();
     _loadBannerAd();
-  }
-
-  void _loadBannerAd() {
-    _bannerAd = BannerAd(
-      adUnitId: 'ca-app-pub-3940256099942544/6300978111', // Test Ad Unit
-      request: AdRequest(),
-      size: AdSize.banner,
-      listener: BannerAdListener(
-        onAdLoaded: (_) {
-          setState(() {
-            _isBannerAdReady = true;
-          });
-        },
-        onAdFailedToLoad: (ad, error) {
-          print('Ad failed to load: ${error.message}');
-          ad.dispose();
-        },
-      ),
-    )..load();
+    _loadInterstitialAd();
   }
 
   void buildImageMapping() {
@@ -296,6 +332,7 @@ class _QuizPageState extends State<QuizPage> {
       'assets/Bundesland/Sachsen.json', 'assets/Bundesland/Sachsen-Anhalt.json',
       'assets/Bundesland/Schleswig-Holstein.json', 'assets/Bundesland/Thüringen.json',
     ];
+
     for (int i = 0; i < bundeslandFiles.length; i++) {
       if (i * 2 + 1 >= imageFiles.length) break;
       imageMapping[bundeslandFiles[i]] = {
@@ -305,37 +342,89 @@ class _QuizPageState extends State<QuizPage> {
     }
   }
 
+  void _loadBannerAd() {
+    _bannerAd = BannerAd(
+      adUnitId: AdHelper.bannerAdUnitId,
+      request: const AdRequest(),
+      size: AdSize.banner,
+      listener: BannerAdListener(
+        onAdLoaded: (_) => setState(() => _isBannerAdReady = true),
+        onAdFailedToLoad: (ad, error) {
+          print('Banner Ad failed: ${error.message}');
+          ad.dispose();
+        },
+      ),
+    )..load();
+  }
+
+  void _loadInterstitialAd() {
+    InterstitialAd.load(
+      adUnitId: AdHelper.interstitialAdUnitId,
+      request: const AdRequest(),
+      adLoadCallback: InterstitialAdLoadCallback(
+        onAdLoaded: (ad) {
+          _interstitialAd = ad;
+          _isInterstitialAdReady = true;
+        },
+        onAdFailedToLoad: (error) {
+          _interstitialAd = null;
+          _isInterstitialAdReady = false;
+        },
+      ),
+    );
+  }
+
+  void _showInterstitialAd() {
+    if (_isInterstitialAdReady && _interstitialAd != null) {
+      _interstitialAd!.show();
+      _interstitialAd = null;
+      _isInterstitialAdReady = false;
+      _loadInterstitialAd();
+    }
+  }
+
   Future<void> loadQuestions() async {
-  if (widget.overrideQuestions != null) {
-    questions = widget.overrideQuestions!;
-    setState(() {});
-    return;
-  }
-
-  final path = widget.customPath ?? 'assets/questions.json';
-  final String jsonString = await rootBundle.loadString(path);
-  final Map<String, dynamic> jsonMap = json.decode(jsonString);
-  allQuestions = jsonMap.entries.map((entry) {
-    return Question.fromJson(entry.value);
-  }).toList();
-
-  if (widget.showOnlyMarked) {
     final prefs = await SharedPreferences.getInstance();
-    final markedTexts = prefs.getStringList('marked') ?? [];
-    questions = allQuestions.where((q) => markedTexts.contains(q.text)).toList();
-  } else {
-    questions = allQuestions;
+    markedQuestions = (prefs.getStringList('marked') ?? []).toSet();
+
+    if (widget.overrideQuestions != null) {
+      questions = widget.overrideQuestions!;
+    } else {
+      final path = widget.customPath ?? 'assets/questions.json';
+      final jsonString = await rootBundle.loadString(path);
+      final Map<String, dynamic> jsonMap = json.decode(jsonString);
+      allQuestions = jsonMap.entries.map((e) => Question.fromJson(e.value)).toList();
+
+      if (widget.showOnlyMarked) {
+        questions = allQuestions.where((q) => markedQuestions.contains(q.text)).toList();
+      } else {
+        questions = allQuestions;
+      }
+
+      if (widget.resumeFromLast && !widget.showOnlyMarked) {
+        currentIndex = prefs.getInt('lastIndex') ?? 0;
+      }
+    }
+
+    setState(() {});
   }
 
-  if (widget.resumeFromLast && !widget.showOnlyMarked) {
-    await loadProgress();
-  }
-
-  setState(() {});
+void previousQuestion() async {
+  final prefs = await SharedPreferences.getInstance();
+  await prefs.setInt('lastIndex', (currentIndex - 1).clamp(0, questions.length - 1));
+  setState(() {
+    currentIndex = (currentIndex - 1).clamp(0, questions.length - 1);
+    selectedOption = null;
+    showAnswer = false;
+  });
 }
+
   void nextQuestion() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setInt('lastIndex', currentIndex + 1);
+
+    if ((currentIndex + 1) % 5 == 0) _showInterstitialAd();
+
     setState(() {
       currentIndex = (currentIndex + 1) % questions.length;
       selectedOption = null;
@@ -343,51 +432,56 @@ class _QuizPageState extends State<QuizPage> {
     });
   }
 
-  Future<void> loadProgress() async {
+  Future<void> toggleMarkQuestion() async {
     final prefs = await SharedPreferences.getInstance();
-    final savedIndex = prefs.getInt('lastIndex') ?? 0;
-    setState(() {
-      currentIndex = savedIndex;
-    });
-  }
+    final questionText = questions[currentIndex].text;
 
-  void markQuestion() async {
-    final question = questions[currentIndex];
-    final prefs = await SharedPreferences.getInstance();
-    List<String> saved = prefs.getStringList('marked') ?? [];
-    if (!saved.contains(question.text)) {
-      saved.add(question.text);
-      await prefs.setStringList('marked', saved);
+    if (markedQuestions.contains(questionText)) {
+      markedQuestions.remove(questionText);
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text("Frage markiert zum Wiederholen")),
+        SnackBar(content: Text('Question removed from review')),
+      );
+    } else {
+      markedQuestions.add(questionText);
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Question marked for review')),
       );
     }
+
+    await prefs.setStringList('marked', markedQuestions.toList());
+    setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
     if (questions.isEmpty) {
       return Scaffold(
-        appBar: AppBar(title: Text("Leben in Deutschland Quiz")),
+        appBar: AppBar(title: Text('Leben in Deutschland Quiz')),
         body: Center(child: CircularProgressIndicator()),
       );
     }
+
     final question = questions[currentIndex];
-    final int questionNumber = currentIndex + 1;
+    final questionNumber = currentIndex + 1;
+    final isMarked = markedQuestions.contains(question.text);
+
     String? imagePath;
     if (widget.customPath != null &&
         imageMapping.containsKey(widget.customPath) &&
         (questionNumber == 1 || questionNumber == 8)) {
       imagePath = imageMapping[widget.customPath]?[questionNumber];
     }
+
+    if (imagePath == null) {
+    imagePath = topicImages[questionNumber];
+    }
+
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Leben in Deutschland Quiz"),
-      ),
+      appBar: AppBar(title: Text('Leben in Deutschland Quiz')),
       body: Column(
         children: [
           Expanded(
-            child: Padding(
+            child: SingleChildScrollView(
               padding: const EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -422,17 +516,32 @@ class _QuizPageState extends State<QuizPage> {
                           setState(() {
                             selectedOption = index;
                             showAnswer = true;
-                            if (!isCorrect) markQuestion();
                           });
                         },
                       ),
                     );
                   }),
                   SizedBox(height: 24),
-                  ElevatedButton(
-                    onPressed: showAnswer ? nextQuestion : null,
-                    child: Text("Nächste Frage"),
+                  ElevatedButton.icon(
+                    icon: Icon(isMarked ? Icons.bookmark_remove : Icons.bookmark_add),
+                    label: Text(isMarked ? "Remove from Review" : "Mark for Review"),
+                    onPressed: toggleMarkQuestion,
                   ),
+                  SizedBox(height: 12),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      ElevatedButton(
+                        onPressed: currentIndex > 0 ? previousQuestion : null,
+                        child: Text("Previous Question"),
+                      ),
+                      ElevatedButton(
+                        onPressed: showAnswer ? nextQuestion : null,
+                        child: Text("Next Question"),
+                      ),
+                    ],
+                  ),
+
                 ],
               ),
             ),
